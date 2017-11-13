@@ -6,7 +6,7 @@
      
     void insertion_sort(int *);
      
-    void main()
+    int main()
     {
         int a[MAX], i;
      
@@ -21,6 +21,7 @@
         {
             printf(" %d", a[i]);
         }
+        return 0;
     }
      
     /* sorts the input */
@@ -32,7 +33,7 @@
         {
             temp = x[i];
             j = i - 1;
-            while (temp < x[j] && j >= 0)
+            while (j >= 0 && temp < x[j])
             {
                 x[j + 1] = x[j];
                 j = j - 1;

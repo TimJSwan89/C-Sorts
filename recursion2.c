@@ -35,17 +35,14 @@
     }
     int search(int array[], int size, int key)
     {
-        int location;
+        if (size == -1)
+            return -1;
         if (array[size] == key)
         {
             return size;
         }
-        else if (size == -1)
-        {
-            return -1;
-        }
         else
         {
-            return (location = search(array, size - 1, key));
+            return search(array, size - 1, key);
         }
     }

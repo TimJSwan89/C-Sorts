@@ -35,7 +35,7 @@
             /* 
               * Leftward pass will shift the smallest element to its correct place at the beginning
               */
-            for (i= MAX - 1, c = 0; i >= c; i--)
+            for (i= MAX - 1, c = 1; i >= c; i--)
             {
                 if(data[i] < data[i - 1])
                 {

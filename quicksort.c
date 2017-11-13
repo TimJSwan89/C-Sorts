@@ -38,11 +38,11 @@
             j = high;
             while (i < j) 
             {
-                while (list[i] <= list[pivot] && i <= high)
+                while (i <= high && list[i] <= list[pivot])
                 {
                     i++;
                 }
-                while (list[j] > list[pivot] && j >= low)
+                while (j >= low && list[j] > list[pivot])
                 {
                     j--;
                 }

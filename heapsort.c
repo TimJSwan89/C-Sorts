@@ -3,12 +3,12 @@
      */ 
     #include <stdio.h>
      
-    void main()
+    int main()
     {
-        int heap[10], no, i, j, c, root, temp;
-     
+        int no, i, j, c, root, temp;
         printf("\n Enter no of elements :");
         scanf("%d", &no);
+        int heap[no];
         printf("\n Enter the nos : ");
         for (i = 0; i < no; i++)
            scanf("%d", &heap[i]);
@@ -40,9 +40,9 @@
             do 
             {
                 c = 2 * root + 1;    /* left node of root element */
-                if ((heap[c] < heap[c + 1]) && c < j-1)
+                if (c < j - 1 && (heap[c] < heap[c + 1]))
                     c++;
-                if (heap[root]<heap[c] && c<j)    /* again rearrange to max heap array */
+                if (c < j && heap[root] < heap[c])    /* again rearrange to max heap array */
                 {
                     temp = heap[root];
                     heap[root] = heap[c];
@@ -55,4 +55,5 @@
         for (i = 0; i < no; i++)
            printf("\t %d", heap[i]);
         printf("\n Complexity : \n Best case = Avg case = Worst case = O(n logn) \n");
+        return 0;
     }

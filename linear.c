@@ -5,13 +5,13 @@
      */
     #include <stdio.h>
      
-    void main()
+    int main()
     {
-        int array[10];
         int i, num, keynum, found = 0;
      
         printf("Enter the value of num \n");
         scanf("%d", &num);
+        int array[num];
         printf("Enter the elements one by one \n");
         for (i = 0; i < num; i++)
         {
@@ -37,4 +37,5 @@
             printf("Element is present in the array\n");
         else
             printf("Element is not present in the array\n");
+        return 0;
     }
